@@ -18,7 +18,7 @@ export default {
   css: [
     "ant-design-vue/dist/antd.css",
     "~/static/css/main.css",
-    "~/static/css/main.sass"
+    "~/static/sass/main.sass"
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
