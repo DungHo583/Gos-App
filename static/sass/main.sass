@@ -9,15 +9,75 @@ body
     background-color: #1e2f56 !important
 
 #layout-base
+    height: 100vh
     .trigger
         font-size: 18px
-        line-height: 64px
-        padding: 0 24px
         cursor: pointer
         transition: color 0.3s
     .trigger:hover
         color: #1890ff
     .logo
+        display: flex
+        align-items: center
+        justify-content: center
         height: 52px
-        background: rgba(255, 255, 255, 0.2)
-        margin: 16px
+        background-color: #1e2f56
+
+.layout-sidebar
+    position: relative
+
+.ant-menu-inline-collapsed
+    width: 69px !important
+
+.ant-layout-header
+    height: 50px
+    line-height: 0
+    display: flex
+    align-items: center
+    
+    .content-topbar
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 0 20px
+        .content-topbar-left
+            display: flex
+            align-items: center
+            justify-content: space-between
+            h3
+                margin: 0
+            .trigger
+                margin-right: 14px
+        .content-topbar-right
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .logo-name
+                width: 34px
+                height: 34px
+                background-color: #F3A100
+                border-radius: 50%
+                margin-right: 8px
+                display: flex
+                align-items: center
+                justify-content: center
+                span
+                    color: #fff
+                    font-size: 14px
+                    font-weight: 700
+            p
+                margin: 0
+                color: #27324D
+                font-size: 14px
+            .language 
+                display: flex
+                align-items: center
+                img
+                    margin-right: 6px
+                p
+                    margin: 0
+                    color: #999999
+            .avt-user
+                margin-left: 37px
+                margin-right: 13px

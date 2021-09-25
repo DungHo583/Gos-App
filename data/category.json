@@ -1,0 +1,58 @@
+{
+    "list_menu": [
+        {
+            "title": "DashBoard",
+            "icon": "appstore",
+            "child": null
+        },
+        {
+            "title": "Thống kê",
+            "icon": "line-chart",
+            "child": null
+        },
+        {
+            "title": "Bán hàng",
+            "icon": "shopping-cart",
+            "child": null
+        },
+        {
+            "title": "Đơn hàng",
+            "icon": "profile",
+            "child": null
+        },
+        {
+            "title": "Sản phẩm",
+            "icon": "inbox",
+            "child": [
+                {
+                    "title": "Quản lý sản phẩm"
+                },
+                {
+                    "title": "Nhập hàng"
+                },
+                {
+                    "title": "Xuất hàng"
+                },
+                {
+                    "title": "Lịch sử bán hàng"
+                },
+                {
+                    "title": "Kho hàng"
+                },
+                {
+                    "title": "Chuyển kho"
+                }
+            ]
+        },
+        {
+            "title": "Khách hàng",
+            "icon": "team",
+            "child": null
+        },
+        {
+            "title": "Cài đặt",
+            "icon": "setting",
+            "child": null
+        }
+    ]
+}
