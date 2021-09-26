@@ -1,0 +1,14 @@
+{
+    "layout": [
+        {
+            "id": 1,
+            "icon-layout": "menu",
+            "title-layout": "Dashboard"
+        },
+        {
+            "id": 2,
+            "icon-layout": "arrow-left",
+            "title-layout": "Dashboard"
+        }
+    ]
+}

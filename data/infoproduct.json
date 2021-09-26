@@ -1,0 +1,62 @@
+{
+    "title_product": "Tẩy trang Garnier Micellar Rose Water & Glow 400ml",
+    "content_product_right": [
+        {
+            "label_title": "Danh mục sản phẩm:",
+            "type": "normal",
+            "label_content": "Shampoo" 
+        },
+        {
+            "label_title": "Chính sách bảo hành:",
+            "type": "normal",
+            "label_content": "Không có bảo hành" 
+        },
+        {
+            "label_title": "Gắn thẻ:",
+            "type": "normal",
+            "label_content": "Nước thần, Eucerin" 
+        },
+        {
+            "label_title": "Số lượng phiên bản:",
+            "type": "normal",
+            "label_content": "3" 
+        }
+    ],
+    "content_product_left": [
+        {
+            "label_title": "Trạng thái:",
+            "type": "tag",
+            "label_content": "Hiện thị" 
+        },
+        {
+            "label_title": "Bán tồn kho âm:",
+            "type": "normal",
+            "label_content": "Cho phép" 
+        },
+        {
+            "label_title": "Đơn vị tính:",
+            "type": "normal",
+            "label_content": "Cái" 
+        },
+        {
+            "label_title": "Kho nhập vào:",
+            "type": "normal",
+            "label_content": "Kho 2" 
+        },
+        {
+            "label_title": "Cảnh báo sắp hết hàng:",
+            "type": "normal",
+            "label_content": "4" 
+        },
+        {
+            "label_title": "Tạo:",
+            "type": "normal",
+            "label_content": "Nana Nuguyen" 
+        },
+        {
+            "label_title": "Sửa cuối:",
+            "type": "normal",
+            "label_content": "Nana Nuguyen" 
+        }
+    ]
+}
