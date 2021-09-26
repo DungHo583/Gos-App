@@ -9,10 +9,17 @@
     >
       <div
         class="logo"
-        :style="collapsed ? 'margin: 16px 10px' : 'margin: 16px 16px'"
+        :style="
+          collapsed ? 'margin: 23px 10px' : 'margin: 23px 16px'
+        "
       >
         <a href="/">
           <img
+            :style="
+              collapsed
+                ? 'width: 40px; height: 40px;'
+                : ''
+            "
             :src="
               collapsed ? '/images/logo_sidebar.svg' : '/images/logopage.png'
             "
@@ -58,14 +65,12 @@
           </div>
           <div class="content-topbar-right">
             <div class="logo-name"><span>SC</span></div>
-            <p>
-              Sun Cosmetic
-            </p>
+            <p>Sun Cosmetic</p>
             <div class="avt-user">
-              <img src="/images/user.svg" alt="">
+              <img src="/images/user.svg" alt="" />
             </div>
             <div class="language">
-              <img src="/images/languege_vn.svg" alt="">
+              <img src="/images/languege_vn.svg" alt="" />
               <p>VN</p>
             </div>
           </div>
@@ -105,7 +110,7 @@ export default {
   .btn-open-sidebar
     position: absolute
     right: -11px
-    top: 120px
+    top: 135px
     padding: 0 !important
     width: 22px
     height: 22px
