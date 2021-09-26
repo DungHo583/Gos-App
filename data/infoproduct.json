@@ -26,7 +26,7 @@
         {
             "label_title": "Trạng thái:",
             "type": "tag",
-            "label_content": "Hiện thị" 
+            "label_content": "Hiển thị" 
         },
         {
             "label_title": "Bán tồn kho âm:",
@@ -51,12 +51,14 @@
         {
             "label_title": "Tạo:",
             "type": "normal",
-            "label_content": "Nana Nuguyen" 
+            "label_content": "Nana Nuguyen",
+            "date_time": "15/09/2021  01:25"
         },
-        {
+        { 
             "label_title": "Sửa cuối:",
             "type": "normal",
-            "label_content": "Nana Nuguyen" 
+            "label_content": "Nana Nuguyen" ,
+            "date_time": "23/10/2021  13:55"
         }
     ]
 }

@@ -82,7 +82,7 @@ import CategoryData from "~/data/category.json";
 export default {
   data() {
     return {
-      collapsed: false,
+      collapsed: true,
       category: CategoryData.list_menu,
     };
   },
