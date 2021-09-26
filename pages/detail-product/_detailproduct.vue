@@ -18,12 +18,27 @@
 import InfoProduct from "./infoproduct.vue";
 import ListProduct from "./listproduct.vue";
 import VersionProduct from "./versionproduct.vue";
+
 export default {
   layout: "layout-base",
   components: {
     InfoProduct,
     ListProduct,
     VersionProduct,
+  },
+  data() {
+    return {
+      title: [
+        {
+          title_layout: "Chi tiết sản phẩm",
+          icon_layout: "arrow-left",
+          btn_layout: 1,
+        },
+      ],
+    };
+  },
+  created() {
+    this.$parent.$emit("event", this.title);
   },
 };
 </script>

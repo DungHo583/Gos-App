@@ -9,17 +9,11 @@
     >
       <div
         class="logo"
-        :style="
-          collapsed ? 'margin: 23px 10px' : 'margin: 23px 16px'
-        "
+        :style="collapsed ? 'margin: 23px 10px' : 'margin: 23px 16px'"
       >
         <a href="/">
           <img
-            :style="
-              collapsed
-                ? 'width: 40px; height: 40px;'
-                : ''
-            "
+            :style="collapsed ? 'width: 40px; height: 40px;' : ''"
             :src="
               collapsed ? '/images/logo_sidebar.svg' : '/images/logopage.png'
             "
@@ -58,12 +52,25 @@
           <div class="content-topbar-left">
             <a-icon
               class="trigger"
-              :type="collapsed ? 'menu' : 'menu'"
+              :type="
+                title_layout_child[0]
+                  ? title_layout_child[0].icon_layout
+                  : 'menu'
+              "
               @click="() => (collapsed = !collapsed)"
             />
-            <h3>Dashboard</h3>
+            <h3 v-if="title_layout_child[0]">
+              {{ title_layout_child[0].title_layout }}
+            </h3>
+            <h3 v-if="!title_layout_child[0]">Dashboard</h3>
           </div>
           <div class="content-topbar-right">
+            <div
+              class="btn-action-layout"
+              v-if="layout_action == 1"
+            >
+              <ActionProduct />
+            </div>
             <div class="logo-name"><span>SC</span></div>
             <p>Sun Cosmetic</p>
             <div class="avt-user">
@@ -77,28 +84,41 @@
         </div>
       </a-layout-header>
       <a-layout-content>
-        <Nuxt />
+        <Nuxt @event="getEvent" />
       </a-layout-content>
     </a-layout>
   </a-layout>
 </template>
 <script>
 import CategoryData from "~/data/category.json";
+import ActionProduct from "./buttonaction.vue";
+
 export default {
+  components: {
+    ActionProduct,
+  },
   data() {
     return {
       collapsed: true,
       category: CategoryData.list_menu,
+      title_layout_child: [],
+      layout_action: '',
     };
   },
   methods: {
     toggleCollapsed() {
       this.collapsed = !this.collapsed;
     },
+    getEvent(title) {
+      this.title_layout_child = title;
+      this.layout_action = this.title_layout_child[0].btn_layout;
+    },
   },
 };
 </script>
 <style lang="sass">
+.btn-action-layout 
+  margin-right: 47px
 .side-close
   width: 69px !important
   min-width: 69px !important
