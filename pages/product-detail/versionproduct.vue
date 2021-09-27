@@ -47,8 +47,16 @@
             <td style="text-align: right">{{ item.wholesale_price }}</td>
             <td style="text-align: right">{{ item.weigh }}</td>
             <td style="text-align: right">{{ item.product_input }}</td>
-            <td style="text-align: right">{{ item.inventory }} <span class="icon-seemore"><a-icon type="eye" /></span></td>
-            <td style="text-align: right">{{ item.can_sell }} <span class="icon-seemore"><a-icon type="eye" /></span></td>
+            <td style="text-align: right">
+              {{ item.inventory }}
+              <span class="icon-seemore" @click="showModal"
+                ><a-icon type="eye"
+              /></span>
+            </td>
+            <td style="text-align: right">
+              {{ item.can_sell }}
+              <span class="icon-seemore"><a-icon type="eye" /></span>
+            </td>
             <td class="history-warehouse">
               <a href="javascript:;">Bấm để xem</a>
             </td>
@@ -56,6 +64,16 @@
         </tbody>
       </table>
     </div>
+    <a-modal
+      class="layout-modal"
+      v-model="visible"
+      title="Thông tin kho"
+      :footer="null"
+    >
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+      <p>Some contents...</p>
+    </a-modal>
   </div>
 </template>
 
@@ -65,7 +83,17 @@ export default {
   data() {
     return {
       product: ProductList.list_product,
+      visible: false,
     };
+  },
+  methods: {
+    showModal() {
+      this.visible = true;
+    },
+    handleOk(e) {
+      console.log(e);
+      this.visible = false;
+    },
   },
 };
 </script>
@@ -76,7 +104,7 @@ export default {
   .label-title
     margin-bottom: 20px
   .label-content
-    margin: 0 -20px !important 
+    margin: 0 -20px !important
     overflow-x: scroll
     .table-data-version
       width: max-content
@@ -97,8 +125,8 @@ export default {
             font-size: 14px
             line-height: 21px
             padding: 10px 20px
-            .icon-seemore 
-              margin-left: 10px 
+            .icon-seemore
+              margin-left: 10px
               cursor: pointer
               .anticon
                 color: #4880FF
@@ -108,7 +136,7 @@ export default {
           .history-warehouse
             text-decoration-line: underline
             color: #4880FF
-        tr:hover 
+        tr:hover
           background: #F5F6FA
 .avt-product
   background: #EAEBF0
@@ -122,4 +150,28 @@ export default {
   .product-img
     width: 35px
     height: 35px
+
+.layout-modal
+  .ant-modal-wrap
+    .ant-modal
+      min-width: 620px
+      max-width: 1110px
+      height: 390px
+      .ant-modal-content
+        .ant-modal-close
+          top: 9px
+        .ant-modal-header
+          padding: 25px 30px
+          border-bottom: none
+          .ant-modal-title
+            font-style: normal
+            font-weight: bold
+            font-size: 19px
+            line-height: 22px
+            color: #222222
+        .ant-modal-body
+          padding: 0 30px
+        .ant-modal-footer
+          padding: 30px
+          border-top: none
 </style>
